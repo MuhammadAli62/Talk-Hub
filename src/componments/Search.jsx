@@ -96,6 +96,8 @@ const Search = () => {
         setUserName("")
         setUser(null)
     }
+
+    console.log(error)
     return (
         <Stack direction="column">
             <SearchComp>
