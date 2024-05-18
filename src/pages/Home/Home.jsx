@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Grid, Stack, Typography, useMediaQuery, ThemeProvider, createTheme, Divider } from "@mui/material";
+import { Grid, Stack, Typography, useMediaQuery, ThemeProvider, createTheme } from "@mui/material";
 import Search from "../../componments/Search";
 import Navbar from "../../componments/Navbar";
 import ChatBox from "../../componments/Chatbox";

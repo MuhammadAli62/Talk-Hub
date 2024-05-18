@@ -32,6 +32,8 @@ const SignIn = () => {
         case 'auth/invalid-credential':
           setError('Check your email and Password');
           break;
+          default:
+          break;
       }
     }
 

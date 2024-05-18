@@ -91,7 +91,7 @@ const Search = () => {
                 })
             }
         }catch(error){
-
+            console.log(error)
         }
         setUserName("")
         setUser(null)
