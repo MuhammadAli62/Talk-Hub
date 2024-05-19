@@ -27,7 +27,6 @@ const Chats = () => {
   }, [currentUser?.uid]);
 
   const handleSelect = (u) => {
-    alert("jjd")
     dispatch({ type: "CHANGE_USER", payload: u });
   };
 
@@ -51,7 +50,7 @@ const Chats = () => {
               </Typography>
             </Stack>
             <Typography variant="body2" component="h6" sx={{wordBreak:"break-all"}} >
-              {chat[1].lastMessage?.text}
+              {chat[1].lastMessage?.text === "" ? 'Photo' : chat[1].lastMessage?.text}
             </Typography>
           </Stack>
         );
