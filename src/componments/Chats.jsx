@@ -50,7 +50,7 @@ const Chats = () => {
               </Typography>
             </Stack>
             <Typography variant="body2" component="h6" sx={{wordBreak:"break-all"}} >
-              {chat[1].lastMessage?.text === "" ? 'Photo' : chat[1].lastMessage?.text}
+              {chat[1].lastMessage?.text == "" ? console.log('photo') : chat[1].lastMessage?.text}
             </Typography>
           </Stack>
         );
