@@ -43,7 +43,7 @@ const Home = () => {
                             <Stack direction="column" spacing={2}>
                                 <Navbar />
                                 <Search />
-                                <TabBox/>
+                                <TabBox handleBacks={handleBack}/>
                             </Stack>
                         </Grid>
                     )}
@@ -54,14 +54,14 @@ const Home = () => {
                         <Stack direction="column" spacing={2}>
                             <Navbar />
                             <Search />
-                            <TabBox/>
+                            <TabBox handleBacks={handleBack}/>
                         </Stack>
                     </Grid>
                     <Grid item xs={12} sm={8} sx={{ backgroundColor: "#EFEAE2", backgroundImage: `url(${bg})`, backgroundSize: "cover" }}>
                         {data.chatId === "null" ? (
                             <Typography variant="h6" component="h6">No User Select</Typography>
                         ) : (
-                            <ChatBox />
+                            <ChatBox handleBacks={handleBack}/>
                         )}
                     </Grid>
                 </Grid>

@@ -5,7 +5,7 @@ import { ChatContext } from "../chatContext";
 import { db } from "../firebase";
 import { onSnapshot, doc } from "firebase/firestore";
 
-const Chats = () => {
+const Chats = ({handleBacks}) => {
   const { currentUser } = useContext(AuthContext);
   const { dispatch } = useContext(ChatContext);
   const [chats, setChats] = useState([]);
@@ -43,14 +43,14 @@ const Chats = () => {
             onClick={() => handleSelect(chat[1].userInfo)}
             sx={{cursor:"pointer"}}
           >
-            <Stack direction="row" spacing={1} alignItems="center">
+            <Stack direction="row" spacing={1} alignItems="center" onClick={handleBacks}>
               <Avatar src={chat[1].userInfo.photoURL} alt={chat[1].userInfo.displayName} />
               <Typography variant="body2" textTransform="capitalize" component="h6">
                 {chat[1].userInfo.displayName}
               </Typography>
             </Stack>
             <Typography variant="body2" component="h6" sx={{wordBreak:"break-all"}} >
-              {chat[1].lastMessage?.text === "" ? chat[1].lastMessage?.text :console.log('photo') }
+              {chat[1].lastMessage?.text === "" ?  "Photo" : chat[1].lastMessage?.text  }
             </Typography>
           </Stack>
         );

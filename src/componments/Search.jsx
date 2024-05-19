@@ -33,7 +33,7 @@ const Inputbase = styled(InputBase)({
 
 })
 
-const Search = () => {
+const Search = ({handleBacks}) => {
 
     const [userName, setUserName] = useState("")
     const [user, setUser] = useState(null)
@@ -107,7 +107,7 @@ const Search = () => {
                 <Inputbase placeholder="Search…"
                     inputProps={{ 'aria-label': 'search' }} value={userName} onKeyDown={handleKey} onChange={(e) => setUserName(e.target.value)} />
             </SearchComp>
-            {user && <Stack direction="row" spacing={2} alignItems="center" onClick={handleSelect}>
+            {user && <Stack  direction="row" spacing={2} alignItems="center" onClick={handleSelect}>
                 <Avatar src={user.photoURL} alt={user.displayName} />
                 <Typography variant="body2" component="h6">{user.displayName}</Typography>
             </Stack>

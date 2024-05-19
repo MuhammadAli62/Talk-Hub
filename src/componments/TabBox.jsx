@@ -5,7 +5,7 @@ import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import Userlist from "./Userlist";
 import Chats from "./Chats";
 
-const TabBox = () => {
+const TabBox = ({handleBacks}) => {
     const [selectedTab, setSelectedTab] = useState(0);
 
     const handleToggle = () => {
@@ -22,7 +22,7 @@ const TabBox = () => {
                     <GroupAddIcon />
                 </IconButton>
             </Box>
-            {selectedTab ? <Userlist/> : <Chats />}
+            {selectedTab ? <Userlist /> : <Chats handleBacks={handleBacks}/>}
         </Stack>
     );
 };
