@@ -39,6 +39,7 @@ const Inputs = () => {
 
 
   const handleClick = async () => {
+  
     if (img) {
       const storageRef = ref(storage, uuid());
 
@@ -49,6 +50,7 @@ const Inputs = () => {
         (error) => {
           console.log(error);
         },
+        
         async () => {
           try {
             const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
