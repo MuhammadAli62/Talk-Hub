@@ -48,7 +48,7 @@ const Chats = () => {
                 {chat[1].userInfo.displayName}
               </Typography>
             </Stack>
-            <Typography variant="body2" component="h6">
+            <Typography variant="body2" component="h6" sx={{wordBreak:"break-all"}} >
               {chat[1].lastMessage?.text}
             </Typography>
           </Stack>

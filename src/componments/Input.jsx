@@ -35,6 +35,9 @@ const Inputs = () => {
   const { currentUser } = useContext(AuthContext);
   const { data } = useContext(ChatContext);
 
+
+
+
   const handleClick = async () => {
     if (img) {
       const storageRef = ref(storage, uuid());

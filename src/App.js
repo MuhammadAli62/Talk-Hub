@@ -22,7 +22,7 @@ function App() {
         <Route path="/">
           <Route index element={
             <ProtactedRotes>
-              <Home />
+              <Home/>
             </ProtactedRotes>
           } />
           <Route path="signup" element={<SignUp />} />
