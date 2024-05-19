@@ -64,7 +64,7 @@ const Userlist = () => {
             <Typography variant="subtitle2" component="h6">
             Members of the chat app can be added to your friend list by clicking on their names</Typography>
             {user && user?.map((user) =>
-                <Stack key={user.uid} direction="row" spacing={2} alignItems="center" onClick={()=> handleSelect(user.uid,user.photoURL, user.displayName)}>
+                <Stack key={user.uid} direction="row" spacing={2} alignItems="center"   sx={{cursor:"pointer"}} onClick={()=> handleSelect(user.uid,user.photoURL, user.displayName)}>
                     <Avatar src={user.photoURL} alt={user.displayName} />
                     <Typography variant="body2" component="h6">{user.displayName}</Typography>
                 </Stack>)

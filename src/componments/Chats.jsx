@@ -41,6 +41,7 @@ const Chats = () => {
             alignItems="start"
             key={chat[0]}
             onClick={() => handleSelect(chat[1].userInfo)}
+            sx={{cursor:"pointer"}}
           >
             <Stack direction="row" spacing={1} alignItems="center">
               <Avatar src={chat[1].userInfo.photoURL} alt={chat[1].userInfo.displayName} />
